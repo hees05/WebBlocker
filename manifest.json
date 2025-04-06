@@ -5,12 +5,14 @@
   "permissions": ["tabs", "scripting", "storage"],
   "host_permissions": ["<all_urls>"],
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "background.js",
+    "type" : "module"
   },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
       "js": ["content.js"],
+      "type" : "module",
       "run_at": "document_idle"
     }
   ],
@@ -19,8 +21,13 @@
   },
   "web_accessible_resources": [
     {
-      "resources": ["warning.html", "warning.js","statistics.html"],
+      "resources": ["warning.html", "warning.js", "statistics.html", "statistics.js", "firebase.js"],
       "matches": ["<all_urls>"]
     }
-  ]
+  ],
+
+    "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';"
+  }
+
 }

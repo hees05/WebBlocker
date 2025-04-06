@@ -1,62 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Blocked Keyword Stats</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f4f4f4;
-      color: #333;
-      text-align: center;
-      padding: 40px;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f4f4f4;
     }
-  
+
     h2 {
-      font-size: 2rem;
-      margin-bottom: 30px;
-      color: #222;
+      margin-bottom: 20px;
+      color: #333;
     }
-  
+
     table {
-      margin: 0 auto;
       border-collapse: collapse;
-      width: 80%;
-      max-width: 600px;
-      background: #fff;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      width: 60%;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-  
+
     th, td {
-      padding: 15px 20px;
-      border-bottom: 1px solid #ddd;
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: center;
     }
-  
+
     th {
-      background: #444;
+      background-color: #555;
       color: white;
-      font-weight: 600;
     }
-  
-    td {
-      font-size: 1rem;
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
     }
-  
-    tr:last-child td {
-      border-bottom: none;
-    }
-  
+
     tr:hover {
-      background: #f9f9f9;
+      background-color: #f1f1f1;
     }
   </style>
-  
 </head>
 <body>
+  <!-- page header -->
   <h2>Blocked Keyword Stats</h2>
 
+  <!-- table to display the keyword counts-->
   <table>
     <thead>
       <tr>
@@ -69,7 +59,7 @@
     </tbody>
   </table>
 
-  <!-- ✅ Use external script -->
-  <script src="statistics.js"></script>
+  <!-- load your bundled Firebase logic -->
+  <script type="module" src="statistics.js"></script>
 </body>
 </html>

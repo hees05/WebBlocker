@@ -1,5 +1,5 @@
 // Optional: import Neuphonic if using a bundler
-// import { createBrowserClient } from '@neuphonic/neuphonic-js/browser';
+import { createBrowserClient } from '@neuphonic/neuphonic-js/browser';
 
 
 //This will show the deleted/added word for 10 seconds. 
@@ -68,7 +68,13 @@ document.addEventListener("DOMContentLoaded", async () => {
   
     // Gets the blocked keyword from the URL/page.
     const params = new URLSearchParams(window.location.search);
-    const keyword = params.get("reason") || "a restricted keyword";
+    let keyword = params.get("reason");
+
+    // If the keyword is missing or suspiciously short, avoid displaying it
+    if (!keyword || keyword.trim().length < 2) {
+    keyword = "a restricted keyword";
+    }
+
     reasonDiv.textContent = `You were denied access due to the keyword: “${keyword}”.`;
   
     //Setting up the neuphonic customer to speak the warning out loud (danger keyword search up prevention purposes)
@@ -124,6 +130,7 @@ document.addEventListener("DOMContentLoaded", async () => {
               stats[newKeyword] = 0;
               chrome.storage.local.set({ blockedStats: stats }, () => {
               showTemporaryBanner(`✅ "${newKeyword}" added to blocked keywords.`, "success");
+              chrome.runtime.sendMessage({ type: "keywordAdded", keyword: newKeyword });
             });
             } else {
                 showTemporaryBanner(`⚠️ "${newKeyword}" is already in blocked keywords.`, "error");

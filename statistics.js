@@ -1,18 +1,16 @@
-// This is the list where the keywords go, which are searched for in the future accessed pages.
-const dangerKeywords = ["corn", "kiss", "huzz", "rizz", "bet", "trallelo trallala"];
+// statistics.js
+import { db } from './firebase.js';
+import { collection, getDocs } from 'firebase/firestore';
 
-// Access the body of the table
-const body = document.getElementById("stats-body");
+document.addEventListener("DOMContentLoaded", async () => {
+  const body = document.getElementById("stats-body");
 
-// Retrieve blocked keyword stats from local storage
-chrome.storage.local.get("blockedStats", (result) => {
-  console.log("Blocked stats retrieved:", result); // DEBUG
+  const snapshot = await getDocs(collection(db, "keywordStats"));
 
-  const stats = result.blockedStats || {};
+  snapshot.forEach(doc => {
+    const keyword = doc.id;
+    const count = doc.data().count || 0;
 
-  // Loop through the full list to ensure 0s are included
-  dangerKeywords.forEach(keyword => {
-    const count = stats[keyword] || 0;
     const row = document.createElement("tr");
     row.innerHTML = `<td>${keyword}</td><td>${count}</td>`;
     body.appendChild(row);
