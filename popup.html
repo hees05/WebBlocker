@@ -6,5 +6,14 @@
     <h1>WebBlocker Enabled</h1>
     <!--This shows what the extension does-->
     <p>Websites with restricted keywords will be blocked.</p>
+
+    <!-- The button for accessing statistics page -->
+  <button id="viewStats">View Search Statistics</button>
+
+  <script>
+    document.getElementById("viewStats").addEventListener("click", () => {
+      chrome.tabs.create({ url: chrome.runtime.getURL("statistics.html") });
+    });
+  </script>
   </body>
 </html>

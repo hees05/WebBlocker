@@ -19,7 +19,7 @@
   },
   "web_accessible_resources": [
     {
-      "resources": ["warning.html", "warning.js"],
+      "resources": ["warning.html", "warning.js","statistics.html"],
       "matches": ["<all_urls>"]
     }
   ]

@@ -6,6 +6,16 @@ document.addEventListener("DOMContentLoaded", async () => {
     const goBackButton = document.getElementById("goBack");
     const reasonDiv = document.getElementById("reason");
     const liveMsg = document.getElementById("live-message");
+
+    // Setup listener for the statistics button on the warning.html page
+    // Opens stats.html in a new browser tab
+    const viewStatsButton = document.getElementById("viewStats");
+    if (viewStatsButton) {
+    viewStatsButton.addEventListener("click", () => {
+        chrome.tabs.create({ url: chrome.runtime.getURL("statistics.html") });
+    });
+    }
+
   
     // Gets the blocked keyword from the URL/page.
     const params = new URLSearchParams(window.location.search);
