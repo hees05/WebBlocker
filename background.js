@@ -3,7 +3,7 @@ chrome.runtime.onMessage.addListener((message, sender) => {
 
   if (message.type === "danger_detected" && message.keyword) {
     chrome.tabs.update(sender.tab.id, {
-      url: chrome.runtime.getURL("warning.html")
+      url: chrome.runtime.getURL("warning.html") + `?reason=${encodeURIComponent(message.keyword)}`
     });
   }
 
@@ -14,5 +14,5 @@ chrome.runtime.onMessage.addListener((message, sender) => {
     }
   }
 
-  return true; // <--- Good practice for async handlers
+  return true; 
 });
