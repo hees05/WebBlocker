@@ -75,24 +75,23 @@
       background-color: #666;
     }
   
-    /* ✅ Move Go Back button to top-left */
     #goBack {
       position: absolute;
-      top: 20px;
-      left: 20px;
-      background-color: #ff5555;
-      color: #fff;
+      bottom: 20px;   /* Distance from bottom */
+      left: 20px;     /* Distance from left */
+      padding: 12px 24px;
+      background: #ff5555;
+      color: white;
       border: none;
       border-radius: 6px;
-      font-size: 0.9rem;
-      padding: 8px 16px;
+      font-size: 1rem;
       cursor: pointer;
       transition: background 0.3s ease;
     }
-  
     #goBack:hover {
-      background-color: #ff3333;
+      background: #ff3333;
     }
+
 
     #viewInstructions {
       position: absolute;
