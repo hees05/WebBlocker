@@ -1,19 +1,26 @@
 {
-    "manifest_version": 3,
-    "name": "SafeSurf Blocker",
-    "version": "1.0",
-    "permissions": ["tabs", "scripting", "storage"],
-    "host_permissions": ["<all_urls>"],
-    "background": {
-      "service_worker": "background.js"
-    },
-    "content_scripts": [{
+  "manifest_version": 3,
+  "name": "SafeSurf Blocker",
+  "version": "1.0",
+  "permissions": ["tabs", "scripting", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
       "matches": ["<all_urls>"],
       "js": ["content.js"],
       "run_at": "document_idle"
-    }],
-    "action": {
-      "default_popup": "popup.html"
     }
-  }
-  
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["warning.html", "warning.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
