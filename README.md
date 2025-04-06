@@ -1,80 +1,92 @@
-🛡️ SafeSurf Blocker — Chrome Extension
-A tool to protect your future self from brainrot on the web.
+# 🛡️ SafeSurf Blocker — Chrome Extension  
+*A tool to protect your future self from brainrot on the web.*
 
-SafeSurf Blocker is a Chrome Extension I built to help people surf the web a bit safer — especially in a world where everything is fighting for your attention (and not always in a good way).
+---
 
-It blocks access to websites with dangerous or low-effort keywords that are known to lead to… well, brainrot. It doesn’t just stop you — it talks to you. Literally.
+## 🚀 Overview  
+**SafeSurf Blocker** is a Chrome Extension developed to help users surf the internet more mindfully in a world where attention is constantly under siege.
 
-When you hit a restricted page, Emily (an AI voice) pops up and tells you why this content is harmful. Then she asks you to repeat:
+It blocks access to websites containing harmful, low-effort, or brain-melting content based on a list of predefined keywords. But it doesn’t just block — it speaks to you.
 
-“I will not search up <keyword> again.”
+When you try visiting a restricted site:
+> 🗣️ Emily (our AI voice assistant) explains why the page is blocked  
+> 🎙️ Then asks you to say:  
+> “I will not search up *<keyword>* again.”  
+> 🙏 And finally —  
+> You must say: “I’m sorry.” before you're allowed to go back.
 
-And if you’re serious about bouncing?
-You’ll need to say “I’m sorry” out loud too.
+It may sound odd, but sometimes reflection and friction are powerful tools for change.
 
-Funny? Yes.
-Cringe? Maybe.
-Effective? That’s the plan.
+---
 
-This is meant for the future of healthier minds online. A gentle nudge when your brain needs it.
+## ✨ Features
 
-✨ Features
-🔐 Blocks pages based on restricted keywords
+- 🔐 **Blocks** pages based on dangerous or distracting keywords  
+- 🎙️ **Voice recognition** to verify spoken phrases  
+- 🧠 Promotes **self-reflection** and accountability  
+- 📊 View **statistics** of blocked keyword attempts  
+- 🗣️ Add/remove keywords using **voice commands**  
+- 📢 Emily (powered by **Neuphonic**) delivers real-time spoken feedback  
+- 🧾 Modal instructions to help you navigate how to use the voice interface  
 
-🧠 Asks you to reflect & apologise before letting you back
+---
 
-🎙️ Uses voice recognition to hear you say the right things
+## 🎤 Voice Commands
 
-📊 Tracks which keywords triggered the blocker in a stats page
+You can say the following:
 
-🗣️ You can add/remove blocked words via your voice
+- `"I will not search up <keyword> again"`  
+  → Unlocks the “Go Back” button
 
-📢 Emily (the Neuphonic AI voice) reads warnings out loud
+- `"I'm sorry"`  
+  → Confirms your reflection and finalises the unlock
 
-🎤 Voice Commands
-You can say things like:
+- `"Can you add <word> to keyword?"`  
+  → Adds a word to the block list
 
-"I will not search up <keyword> again" — unlocks the Go Back button
+- `"Can you delete <word> from the keywords?"`  
+  → Removes a blocked word
 
-"Can you add <word> to keyword?" — adds a keyword to the list
+---
 
-"Can you delete <word> from the keywords?" — removes one
+## 🛠️ Setup Instructions
 
-"I'm sorry" — required to fully unlock the exit
+1. **Clone or download** this repository  
+2. Open `chrome://extensions` in Google Chrome  
+3. Enable **Developer Mode** (top right)  
+4. Click **"Load unpacked"**  
+5. Select the folder containing the extension files  
+6. Ensure you have internet access — Neuphonic's AI voice requires it  
 
-🛠️ Setup
-Clone or download this repo
+---
 
-Open chrome://extensions
+## 📦 Tech Stack
 
-Turn on Developer Mode
+- **JavaScript (Vanilla)**  
+- **HTML & CSS**  
+- **Chrome SpeechRecognition API**  
+- **Neuphonic AI Voice**  
+- **Firebase Firestore** (optional - for storing keyword usage stats)
 
-Click Load unpacked
+---
 
-Select the extension folder
+## ⚠️ Purpose
 
-⚠️ Make sure you’re online so Neuphonic’s voice (Emily) works!
+This extension was created with the belief that the **future of the web** should protect users — not drain them.  
 
-📦 Tech Stack
-Vanilla JavaScript
+Whether you’re trying to break a habit, reduce distractions, or just stay on track — SafeSurf Blocker offers a **gentle intervention** when it’s needed most.
 
-HTML + CSS
+It’s not meant to replace therapy, blockers, or real help. It’s just a tool — but it’s made with care, and a little bit of attitude.
 
-Neuphonic AI voice API
+---
 
-Chrome SpeechRecognition API
+## 🙏 Credits
 
-Firebase (optional: for keyword tracking)
+- **Neuphonic** — for the realistic and expressive voice of Emily  
+- **Friends & testers** — for not judging me during testing  
+- **My brain** — for deciding enough was enough with brainrot
 
-⚠️ Why?
-Because the future of the web should support our brains — not melt them.
+---
 
-This project is a mini step toward a world where tech helps people be intentional. Where habits don’t spiral silently.
-It’s not a replacement for real change, but it’s a solid speed bump on the road to brainrot.
+> “To the future — a version of it where our minds stay a little sharper.”
 
-🙏 Credits
-Neuphonic (for Emily’s soothing-but-serious tone)
-
-The human brain (mine)
-
-Friends who tested and didn't judge me (much)
