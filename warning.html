@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Access Blocked</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #1a1a1a;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .warning-icon {
+      font-size: 6rem;
+      color: #ff5555;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #ff5555;
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 20px 0;
+    }
+
+    button {
+      padding: 12px 24px;
+      font-size: 1rem;
+      background: #ff5555;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #ff3333;
+    }
+
+    .footer {
+      margin-top: 40px;
+      font-size: 0.85rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="warning-icon">⚠️</div>
+  <h1>Access Blocked</h1>
+  <p>
+    This website contains content that violates your safe browsing preferences.<br />
+    We've detected dangerous keywords and blocked the page for your safety.
+  </p>
+  <button onclick="goBack()">Go to Google</button>
+
+  <div class="footer">WebBlocker Extension by You</div>
+
+  <script>
+    function goBack() {
+      window.location.href = "https://www.google.com";
+    }
+  </script>
+</body>
+</html>
