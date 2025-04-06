@@ -1,4 +1,4 @@
-const dangerKeywords = ["gamble", "bet", "casino"];
+const dangerKeywords = ["goon", "sex", "porn"];
 
 const bodyText = document.body.innerText.toLowerCase();
 const foundKeyword = dangerKeywords.find(k => bodyText.includes(k));

@@ -64,13 +64,13 @@
     This website contains content that violates your safe browsing preferences.<br />
     We've detected dangerous keywords and blocked the page for your safety.
   </p>
-  <button onclick="goBack()">Go to Google</button>
+  <button onclick="goBack()">Go Back</button>
 
   <div class="footer">WebBlocker Extension by You</div>
 
   <script>
     function goBack() {
-      window.location.href = "https://www.google.com";
+      window.history.back();
     }
   </script>
 </body>
