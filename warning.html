@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <title>Access Blocked</title>
   <style>
-
     body {
       margin: 0;
       padding: 0;
@@ -17,24 +16,26 @@
       height: 100vh;
       flex-direction: column;
       text-align: center;
+      position: relative;
     }
-
+  
     .warning-icon {
       font-size: 6rem;
       color: #ff5555;
       margin-bottom: 20px;
     }
+  
     h1 {
       font-size: 2.5rem;
       color: #ff5555;
     }
-
+  
     p {
       font-size: 1.2rem;
       max-width: 600px;
       margin: 20px 0;
     }
-
+  
     button {
       padding: 12px 24px;
       font-size: 1rem;
@@ -45,17 +46,17 @@
       cursor: pointer;
       transition: background 0.3s ease;
     }
-
+  
     button:hover {
       background: #ff3333;
     }
-
+  
     .footer {
       margin-top: 40px;
       font-size: 0.85rem;
       color: #888;
     }
-
+  
     #viewStats {
       position: absolute;
       top: 20px;
@@ -69,11 +70,31 @@
       font-size: 0.9rem;
       transition: background 0.3s ease;
     }
-
+  
     #viewStats:hover {
       background-color: #666;
     }
+  
+    /* ✅ Move Go Back button to top-left */
+    #goBack {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background-color: #ff5555;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      padding: 8px 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+  
+    #goBack:hover {
+      background-color: #ff3333;
+    }
   </style>
+  
 </head>
 <body>
   <div class="warning-icon">⚠️</div>
