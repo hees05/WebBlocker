@@ -7,6 +7,14 @@ document.addEventListener("DOMContentLoaded", async () => {
     const reasonDiv = document.getElementById("reason");
     const liveMsg = document.getElementById("live-message");
 
+    // Show instructions modal when button is clicked
+    const instructionsBtn = document.getElementById("viewInstructions");
+    if (instructionsBtn) {
+    instructionsBtn.addEventListener("click", () => {
+        document.getElementById("instructionsModal").style.display = "flex";
+    });
+}
+
     // Setup listener for the statistics button on the warning.html page
     // Opens stats.html in a new browser tab
     const viewStatsButton = document.getElementById("viewStats");
@@ -81,5 +89,15 @@ document.addEventListener("DOMContentLoaded", async () => {
         chrome.runtime.sendMessage({ type: "close_and_open_google" });
       });
     }
+
+    const closeInstructionsBtn = document.getElementById("closeInstructions");
+    const modal = document.getElementById("instructionsModal");
+
+    if (closeInstructionsBtn && modal) {
+    closeInstructionsBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+    }
+
   });
   

@@ -93,6 +93,63 @@
     #goBack:hover {
       background-color: #ff3333;
     }
+
+    #viewInstructions {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      padding: 8px 16px;
+      background-color: #444;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: background 0.3s ease;
+    }
+
+    #viewInstructions:hover {
+      background-color: #666;
+    }
+
+    /*Modal styles for the instructions popup!!!*/
+    #instructionsModal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.75);
+      display: none;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Modal content */
+    .modal-content {
+      background: #222;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 500px;
+      text-align: left;
+      color: #fff;
+      font-size: 1rem;
+    }
+
+    .modal-content h3 {
+      margin-top: 0;
+    }
+
+    .modal-content button {
+      margin-top: 20px;
+      background: #ff5555;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+    }
+
   </style>
   
 </head>
@@ -107,10 +164,26 @@
 
   <div class="footer">WebBlocker Extension by SafeSurf</div>
 
-  <button id="viewStats">📊 View My Stats</button>
+  <button id="viewStats">View My Stats</button>
   <button id="goBack" disabled>Go Back</button>
+  <button id="viewInstructions">Instructions</button>
+
   <div id="live-message" style="margin-top: 20px; font-size: 1.1rem; color: #ccc;"></div>
   <script src="warning.js"></script>
+  
+  <!-- This is intentionally hidden on default, and shown when the user wants to figure out how to use speech recognition.-->
+  <!--This contains the list of all supported comments!-->
+  <div id="instructionsModal">
+    <div class="modal-content">
+      <h3>🗣️ Voice Commands</h3>
+      <ul>
+        <li>Say: <strong>"I will not search up &lt;keyword&gt; again"</strong> to unlock the "Go Back" button.</li>
+        <li>Say: <strong>"Can you add &lt;word&gt; to keyword?"</strong> to block a new keyword.</li>
+        <li>Say: <strong>"Can you delete &lt;word&gt; from the keywords?"</strong> to unblock a keyword.</li>
+      </ul>
+      <button id="closeInstructions">Close</button>
+    </div>
+  </div>
   
 </body>
 </html>
