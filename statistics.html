@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blocked Keyword Stats</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    table {
+      margin-top: 20px;
+      width: 400px;
+      text-align: center;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 10px;
+      border: 1px solid #888;
+    }
+
+    th {
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+  <h2>Blocked Keyword Stats</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Keyword</th>
+        <th>Times Blocked</th>
+      </tr>
+    </thead>
+    <tbody id="stats-body">
+      <!-- stats will be inserted here -->
+    </tbody>
+  </table>
+
+  <!-- ✅ Use external script -->
+  <script src="statistics.js"></script>
+</body>
+</html>
