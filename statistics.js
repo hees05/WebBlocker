@@ -1,6 +1,5 @@
 // This is the list where the keywords go, which are searched for in the future accessed pages.
-const dangerKeywords = ["corn", "kiss", "huzz", "rizz", "bet", "trallelo trallala"];
-
+const dangerKeywords = ["corn", "kiss", "huzz", "rizz", "bet", "trallelo trallala", "casino", "alcohol", "cigarettes", "vapes", "lottery"];
 // Access the body of the table
 const body = document.getElementById("stats-body");
 
